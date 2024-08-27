@@ -3,6 +3,9 @@
 #define VGA_ADDRESS 0xB8000
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 25
+#if defined(__linux__) && defined(__ELF__)
+__asm__(".section .note.GNU-stack,\"\",%progbits");
+#endif
 
 static uint16_t* vga_buffer = (uint16_t*)VGA_ADDRESS;
 

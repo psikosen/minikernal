@@ -10,6 +10,20 @@ This project aims to create a mini kernel inspired by TILCK (Tiny Linux-Compatib
 - **AI Integration**: NLP module and genetic algorithms for optimization
 - **Customizable UI**: Flexible user interface with system monitoring capabilities
 
+
+## Set up
+- brew install qemu
+- brew tap nativeos/i386-elf-toolchain
+- brew install i386-elf-binutils i386-elf-gcc
+- sudo ./create_img_mac.sh
+- chmod +x create_iso.sh  
+- make img
+- make run
+- make clean
+- make
+- qemu-system-x86_64 -drive format=raw,file=mini-neokernel.img
+- nasm -f elf64 src/boot/boot.s -o src/boot/boot.o
+
 ## Language
 
 The core kernel is primarily written in C, with some components in Rust for enhanced safety and performance. Higher-level modules may use C++ or Rust.
