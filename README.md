@@ -24,7 +24,7 @@ This project aims to create a mini kernel inspired by TILCK (Tiny Linux-Compatib
 - make
 - qemu-system-x86_64 -drive format=raw,file=mini-neokernel.img
 - nasm -f elf64 src/boot/boot.s -o src/boot/boot.o
-
+- notes - move scripts up if they dont work in that dir
 https://www.qemu.org/
 
 ## Language
