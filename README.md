@@ -12,6 +12,7 @@ This project aims to create a mini kernel inspired by TILCK (Tiny Linux-Compatib
 
 
 ## Set up
+- install clang - https://clang.llvm.org/
 - brew install qemu
 - brew tap nativeos/i386-elf-toolchain
 - brew install i386-elf-binutils i386-elf-gcc
@@ -23,6 +24,8 @@ This project aims to create a mini kernel inspired by TILCK (Tiny Linux-Compatib
 - make
 - qemu-system-x86_64 -drive format=raw,file=mini-neokernel.img
 - nasm -f elf64 src/boot/boot.s -o src/boot/boot.o
+
+https://www.qemu.org/
 
 ## Language
 
